@@ -1,0 +1,42 @@
+app-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container {
+    overflow-y: hidden;
+    width: 60%;
+    max-height: 500px;
+    transition: max-height 0.4s linear;
+  
+    .products {
+      display: flex;
+      justify-content: center;
+      border: #e4e4e4 2px solid;
+      border-radius: 10px;
+      padding: 40px 80px;
+      flex-wrap: wrap;
+    }
+  }
+  
+  .product {
+    cursor: pointer;
+    height: 80px;
+    width: 190px;
+    margin: 10px;
+    border: #e2e2e2 2px solid;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fafafa;
+  }
+  
+  .collapsed {
+    max-height: 0;
+  }
+  
+  .selected {
+    background-color: #042542de;
+    color: white;
+  }

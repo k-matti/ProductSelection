@@ -1,0 +1,9 @@
+<app-header (expandEmitter)="onExpand($event)"></app-header>
+<div class="container" [ngClass]="{ collapsed: !isExpanded }">
+  <div class="products">
+    <div class="product" *ngFor="let product of products" (click)="onSelectProduct(product)"
+      [ngClass]="{ selected: selectedProduct!.id === product.id ? 'selected' : '' }">
+      <app-product-item [product]="product"> </app-product-item>
+    </div>
+  </div>
+</div>
