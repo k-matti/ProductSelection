@@ -51,12 +51,12 @@ export class ProductsFormComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      product: '',
+      product: "",
     });
 
     this.form.valueChanges
       .pipe(takeUntil(this.destroyed$))
-      .subscribe((x) => console.log(x.product));
+      .subscribe(({ product }) => console.log(product));
   }
 
   ngOnDestroy(): void {
